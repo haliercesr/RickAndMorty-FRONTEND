@@ -1,0 +1,442 @@
+/*NAVBAR*/
+.nav {
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    border-radius: 5px;
+}
+
+#HeartNav {
+    color: red;
+}
+
+.ConteinerNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedorReproductor{
+ position:absolute;
+ top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    padding:0px;
+    border-color: #129007;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.contenedorReproductor:hover{
+    position:absolute;
+ top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    padding:0px;
+    border-color: #129007; 
+}
+
+.Reproductor{
+ width: 250px;
+ height: 30px;
+
+
+}
+
+/* Cambia el color del fondo de los controles */
+audio::-webkit-media-controls-panel {
+    background-color: #197914
+  }
+
+
+/*HOME*/
+
+#salirHome{
+    position: absolute;
+    top: 23%;
+    right: 1.5%;
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 90%;
+    font-weight: 580;
+    padding: 0.3% 1%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+#salirHome:hover {
+   color:rgb(90, 90, 90)
+}
+
+#salirHome:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#bt1Home {
+    position: absolute;
+    top: 23%;
+    right: 6.9%;
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 90%;
+    font-weight: 580;
+    padding: 0.3% 1%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt1Home:hover {
+    color:rgb(90, 90, 90)
+}
+
+;
+
+#bt1Home:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt3Home {
+    position: absolute;
+    top: 23%;
+    left: 23.5%;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 90%;
+    font-weight: 580;
+    padding: 0.3% 1%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt3Home:hover {
+    color:rgb(90, 90, 90)
+}
+
+;
+
+#bt3Home:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+/*FAVORITE*/
+
+#bt1Favorite {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt1Favorite:hover {
+    color:rgb(90, 90, 90)
+}
+
+;
+
+#bt1Favorite:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#bt2Favorite {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt2Favorite:hover {
+    color:rgb(90, 90, 90)
+}
+
+;
+
+#bt2Favorite:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+/*ABOUT*/
+
+#bt2About {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt2About:hover {
+    color:rgb(90, 90, 90)
+}
+
+;
+
+#bt2About:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#bt3About {
+    position: absolute;
+    top: 13px;
+    left: 100px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt3About:hover {
+    color:rgb(90, 90, 90)
+}
+
+;
+
+#bt3About:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+/*DETAIL*/
+
+#bt1Detail {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt1Detail:hover {
+    color:rgb(90, 90, 90)
+}
+
+;
+
+#bt1Detail:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#bt2Detail {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt2Detail:hover {
+    color:rgb(90, 90, 90)
+}
+
+;
+
+#bt2Detail:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#bt3Detail {
+    position: absolute;
+    top: 13px;
+    left: 100px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt3Detail:hover {
+    color:rgb(90, 90, 90)
+}
+
+;
+
+#bt3Detail:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+/*Extra small devices(phones, 600px and down)*/
+
+@media only screen and (max-width: 600px) {}
+
+
+/*Medium devices(landscape tablets and large phones, 768px and up)*/
+@media only screen and (max-width: 768px) {
+    /*HOME*/
+
+    #bt1Home {
+        position: absolute;
+        top: 17%;
+        right: 1.5%;
+        /* Variables */
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+        font-size: 90%;
+        font-weight: 580;
+        padding: 0.05% 2%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid black;
+        box-shadow: 0 0 0 0 black;
+    }
+
+    #bt3Home {
+        position: absolute;
+        top: 17%;
+        left: 51%;
+
+        /* Variables */
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+        font-size: 90%;
+        font-weight: 580;
+        padding: 0.05% 1.5%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid black;
+        box-shadow: 0 0 0 0 black;
+    }
+
+}
+
+
+
+
+/*Large devices(large laptops and desktops, 992px and up)*/
+@media only screen and (max-width: 992px) {
+
+
+}
+
+/*Extra large devices(large laptops and desktops, 1200px and up)*/
+@media only screen and (max-width: 1200px) {
+    /*HOME*/
+
+    .nav {
+        position: absolute;
+        width: 100%;
+        height: 5%;
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        border-radius: 5px;
+    }
+
+    #bt3Home {
+        position: absolute;
+        top: 24%;
+        left: 28.5%;
+
+        /* Variables */
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+        font-size: 90%;
+        font-weight: 580;
+        padding: 0.05% 1.5%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid black;
+        box-shadow: 0 0 0 0 black;
+    }
+}

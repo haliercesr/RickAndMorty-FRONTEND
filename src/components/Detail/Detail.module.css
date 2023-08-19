@@ -1,0 +1,79 @@
+.DetailContainerCard{
+    
+   display: flex;
+   justify-content: center;
+   align-items: top;
+   width: 100%;
+   min-height: 85%;
+   background-image: url('../../../img/fotor_2023-5-2_12_16_33.jpg');
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   padding-top: 90px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 48, 48, 0.5);
+    border-radius: 30px;
+    
+}
+
+.Detail{
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    color:aliceblue;
+    background-color: rgba(10, 10, 10, 0.687);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.titleDetail{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.textDetail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.textDetail h2{
+    margin: 5px
+}
+
+
+
+.img img{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 300
+}
+
+@media only screen and (max-width: 500px) {
+    .DetailContainerCard{
+    
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        width: 100%;
+        min-height: 100%;
+        background-image: url('../../../img/images.jpeg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-top: 90px;
+     }
+ 
+}

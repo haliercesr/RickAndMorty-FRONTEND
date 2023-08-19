@@ -1,0 +1,226 @@
+.Divbarra {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: 23%;
+  height: 100%;
+  background-color: rgba(15, 66, 15, 0.09);
+  border-radius: 5px;
+
+}
+
+.Divbarra label {
+  margin-left: 3%;
+  font-size: 90%;
+  color: rgb(255, 255, 255);
+  font-weight: 580;
+  width: 80%;
+}
+
+.Divbarra input {
+  height: 40%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.Divbarra .random {
+  margin: 1.5%;
+  margin-top: 0.9%;
+  height: 51%;
+  margin-left: 0%;
+  background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+  color: rgb(255, 255, 255);
+  border-radius: 10em;
+  font-size: 90%;
+  font-weight: 580;
+  padding: 0.8% 4%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 0px solid black;
+  box-shadow: 0 0 0 0 black;
+}
+
+.Divbarra .random:hover {
+  color:rgb(90, 90, 90)
+}
+
+;
+
+.Divbarra .random:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+;
+
+
+.random:hover {
+  background-color: grey;
+}
+
+.InputLupa {
+  height: 80%;
+  width: 60%;
+  position: relative;
+  top: 17%;
+  left: -6%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.lupa {
+  position: absolute;
+  background-color: transparent;
+  border: 0px;
+  top: 7%;
+  left: 80%;
+  cursor: pointer
+}
+
+/*Extra small devices(phones, 600px and down)*/
+@media only screen and (max-width: 600px) {}
+
+
+/*Medium devices(landscape tablets and large phones, 768px and up)*/
+@media only screen and (max-width: 768px) {
+
+  /*HOME*/
+  .Divbarra {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(15, 66, 15, 0.09);
+    border-radius: 5px;
+
+  }
+
+  .InputLupa {
+    height: 80%;
+    width: 60%;
+    position: relative;
+    top: 5%;
+    left: -6%;
+    margin: 0%;
+    padding: 0%;
+  }
+
+
+
+  .Divbarra input {
+    height: 70%;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .lupa {
+    position: absolute;
+    background-color: transparent;
+    border: 0px;
+    top: 11%;
+    left: 80%;
+    cursor: pointer
+  }
+
+  .Divbarra .random {
+
+    height: 65%;
+    margin-left: 0%;
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 90%;
+    font-weight: 580;
+    padding: 0.05% 4%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+  }
+
+}
+
+
+/*Large devices(large laptops and desktops, 992px and up)*/
+@media only screen and (max-width: 992px) {
+
+  /*HOME*/
+  .Divbarra {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(15, 66, 15, 0.09);
+    border-radius: 5px;
+
+  }
+
+  .InputLupa {
+    height: 80%;
+    width: 60%;
+    position: relative;
+    top: 5%;
+    left: -6%;
+    margin: 0%;
+    padding: 0%;
+  }
+
+
+
+  .Divbarra input {
+    height: 70%;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .lupa {
+    position: absolute;
+    background-color: transparent;
+    border: 0px;
+    top: 11%;
+    left: 80%;
+    cursor: pointer
+  }
+
+  .Divbarra .random {
+
+    height: 65%;
+    margin-left: 0%;
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 90%;
+    font-weight: 580;
+    padding: 0.05% 4%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+  }
+}
+
+/*Extra large devices(large laptops and desktops, 1200px and up)*/
+@media only screen and (max-width: 1200px) {
+
+  /*HOME*/
+  .Divbarra {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 28%;
+    height: 100%;
+    background-color: rgba(15, 66, 15, 0.09);
+    border-radius: 5px;
+
+  }
+}
