@@ -57,7 +57,7 @@ function App(props) {
 
 useEffect(()=>{
    !access && navigate("/")
-},[access])
+},[access,navigate])
          
 
   

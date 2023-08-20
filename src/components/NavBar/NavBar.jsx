@@ -1,9 +1,9 @@
-import  { useState,useEffect } from "react";
+import  {useEffect } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 import './NavBar.css';
 import { useSelector } from "react-redux";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { addFav } from '../redux/actions/actions';
 import { useDispatch } from 'react-redux';
 import audio1 from '../../MP3SONGS/audio1.mp3'
@@ -19,18 +19,18 @@ const NavBar = (props) => {
     const { onSearch, SubmitSound } = props;
     const allCharacters = useSelector(state => state.allCharacters)
     const songs = [audio1];
-    const [cancionIndex, setCancionIndex] = useState(0);
+   // const [cancionIndex, setCancionIndex] = useState(0);
    
 
  //   const handleNextSong = () => {
    //     setCancionIndex((cancionIndex + 1) % songs.length);
     //  };
 
-    let { Id } = useParams()
+   
 
     useEffect(() => {
         dispatch(addFav({ id: 0 }))
-    }, [])
+    }, [dispatch])
 
 
     const HomeNav = () => {
@@ -139,7 +139,7 @@ const NavBar = (props) => {
     return <div className="nav">
         <div className="contenedorReproductor">
             <audio className="Reproductor"controls autoPlay >
-                <source src={songs[cancionIndex]} type="audio/mp3" />
+                <source src={songs[1]} type="audio/mp3" />
                 Tu navegador no soporta la reproducción de audio.
             </audio>
         </div>

@@ -2,8 +2,8 @@ import Card from '../../components/Card/Card'
 import styles from '../Cards/Cards.module.css'
 import React from 'react';
 import giftWelcome from '../../gifts/rick-and-morty-dance.gif'
-import { counts } from '../redux/actions/actions';
-import { useEffect,useState } from 'react';
+
+import { useState } from 'react';
 import Alert from '../Alert/Alert';
 
 
@@ -44,7 +44,7 @@ export default function Cards(props) {
                   Esperamos que disfrutes explorando el universo de Rick y Morty con nuestra aplicación. ¡Diviértete! 🚀🌌
                </p>
                <div className={styles.giftDance}>
-                  <img src={giftWelcome} />
+                  <img src={giftWelcome} alt="welcome" />
                </div>
 
 

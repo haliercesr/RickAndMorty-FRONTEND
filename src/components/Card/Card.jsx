@@ -17,7 +17,7 @@ function Card(props) {
             setIsFav(true);
          }
       });
-   }, [allCharacters]);
+   }, [allCharacters,props.id]);
 
    const handleFavorite=(event)=>{
       event.preventDefault();
