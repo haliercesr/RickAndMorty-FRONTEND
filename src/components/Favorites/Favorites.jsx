@@ -13,7 +13,6 @@ function Favourites(props) {
     const [num,setNum]=useState(0)
 
     useEffect(() => {
-       
       }, [num]);
 
     function handleOrder(e) {
@@ -35,6 +34,11 @@ function Favourites(props) {
 
     return (
         <div className='ContainerFavorites'>
+            {myFavorites.length===0? <div className='DivCard'>
+                <div className='messajeFav'>
+                    <p>No hay personajes</p>
+                </div>
+            </div>:null}
             <div className="CardsConteinerFavorite">
             <div className='selectDiv'>
                 <select onChange={handleOrder}>

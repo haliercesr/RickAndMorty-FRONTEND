@@ -137,12 +137,7 @@ const NavBar = (props) => {
     
 
     return <div className="nav">
-        <div className="contenedorReproductor">
-            <audio className="Reproductor"controls autoPlay >
-                <source src={songs[1]} type="audio/mp3" />
-                Tu navegador no soporta la reproducción de audio.
-            </audio>
-        </div>
+       
         {location.pathname === "/home" ? (HomeNav()) : null}
         {location.pathname === "/Favorites" ? (Favorites()) : null}
         {location.pathname === "/about" ? (About()) : null}
@@ -152,3 +147,10 @@ const NavBar = (props) => {
 export default NavBar;
 
 //PARA "{location.pathname.startsWith("/detail/") ? (Detail()) : null}  SE PUEDE USAR .startsWith O .includes"
+
+//<div className="contenedorReproductor">
+//<audio className="Reproductor"controls autoPlay >
+//    <source src={songs[1]} type="audio/mp3" />
+//    Tu navegador no soporta la reproducción de audio.
+//</audio>
+//</div>

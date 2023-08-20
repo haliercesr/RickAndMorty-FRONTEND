@@ -11,7 +11,7 @@ function Detail(props) {
    console.log(character)
  
    useEffect(() => {                       
-      axios(`${URLSERVER}/character/${id}`).then(({ data }) => {    //NO USAMOS ASYNC AWAIT ACA PORQUE SUELE SER MAS CONVENIENTE UTILIZAR PROMESAS EN LOS USEEFFECT QUE UTILIZAR ASYNC/AWAIT
+      axios(`${URLSERVER}character/${id}`).then(({ data }) => {    //NO USAMOS ASYNC AWAIT ACA PORQUE SUELE SER MAS CONVENIENTE UTILIZAR PROMESAS EN LOS USEEFFECT QUE UTILIZAR ASYNC/AWAIT
          if (data.name) {                                                   //SE PUEDE PERO ES MAS COMPLEJO PASAR A ASYNC AWAIT, MAS ABAJO LO EXPLICAMOS
             setCharacter(data);
          } else {
