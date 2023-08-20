@@ -1,8 +1,8 @@
 import{ADD_FAV,REMOVE_FAV,ORDER,FILTER, COUNT} from './types'
 import axios from 'axios';
 
-const URL='http://localhost:3001/fav'
-
+//const URL='http://localhost:3001/fav'
+const URL='https://rickandmorty-backend-production.up.railway.app/'
 export const addFav=(char)=>{    // es una accion asiNcrona y retornamos una funcion con dispatch
     return  async function(dispatch){    //LA FUNCION DISPATCH ES LA QUE CONTIENE LA PETICION ENTONCES LE PONEMOS EL ASYNC
        /* axios.post(`${URL}`, char)    // le enviamos la url y necesitamos mandarle la informacion porque es un metodo POST que esta esperando un body, es este caso "char"

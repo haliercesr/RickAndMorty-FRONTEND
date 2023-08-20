@@ -27,7 +27,7 @@ function App(props) {
    const audio1 = document.getElementById("audio");
    const dispatch=useDispatch()
    //const URLSERVER='http://localhost:3001/'
-   const URLSERVER='https://rickandmorty-backend-production.up.railway.app/'   //esta URL la uso para el deploy con Railway
+  const URLSERVER='https://rickandmorty-backend-production.up.railway.app/'   //esta URL la uso para el deploy con Railway
    const [showCustomAlert, setShowCustomAlert] = useState(false);
 
    const openCustomAlert = () => {
@@ -139,8 +139,8 @@ useEffect(()=>{
             <Route path='/' element={<Form closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} login={login} SubmitSound={audio1} access={access} navigate={navigate}/>}/>
             <Route path="/home" element={<Cards closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} characters={characters} onClose={onClose}/>} />
             <Route path="/About" element={<About/>}/>
-            <Route path="/detail/:id" element={<Detail/>}/>
-            <Route path="/favorites" element={<Favorites onClose={onClose} />}></Route>
+            <Route path="/detail/:id" element={<Detail URLSERVER={URLSERVER}/>}/>
+            <Route path="/favorites" element={<Favorites URLSERVER={URLSERVER} onClose={onClose} />}></Route>
             <Route path="/Register" element={<Registro URLSERVER={URLSERVER} SubmitSound={audio1} navigate={navigate}/>}/>
            </Routes>
 

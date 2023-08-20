@@ -1,17 +1,17 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import styles from '../Detail/Detail.module.css'
+import styles from '../Detail/Detail.module.css';
 
-function Detail() {
-
+function Detail(props) {
+ const{URLSERVER}=props
    const { id } = useParams();
 
    const [character, setCharacter] = useState([]);
    console.log(character)
  
    useEffect(() => {                       
-      axios(`http://localhost:3001/character/${id}`).then(({ data }) => {    //NO USAMOS ASYNC AWAIT ACA PORQUE SUELE SER MAS CONVENIENTE UTILIZAR PROMESAS EN LOS USEEFFECT QUE UTILIZAR ASYNC/AWAIT
+      axios(`${URLSERVER}/character/${id}`).then(({ data }) => {    //NO USAMOS ASYNC AWAIT ACA PORQUE SUELE SER MAS CONVENIENTE UTILIZAR PROMESAS EN LOS USEEFFECT QUE UTILIZAR ASYNC/AWAIT
          if (data.name) {                                                   //SE PUEDE PERO ES MAS COMPLEJO PASAR A ASYNC AWAIT, MAS ABAJO LO EXPLICAMOS
             setCharacter(data);
          } else {
