@@ -2,6 +2,7 @@ import Card from '../../components/Card/Card'
 import styles from '../Cards/Cards.module.css'
 import React from 'react';
 import giftWelcome from '../../gifts/rick-and-morty-dance.gif'
+import axios from 'axios';
 
 import { useState } from 'react';
 import Alert from '../Alert/Alert';
@@ -20,7 +21,7 @@ export default function Cards(props) {
    try{
      const {data}=await axios(`${URLSERVER}home`)
      return data
-   }catch(error){error:error.message}
+   }catch(error){return "Estimado/a"}
   }
 
    return <div className={styles.Cards}  >
