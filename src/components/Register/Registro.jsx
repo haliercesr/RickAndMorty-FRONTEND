@@ -53,7 +53,7 @@ export default function Registro(props) {
     }
 
     const handleSubmit = async (e) => {
-        SubmitSound.play()
+        SubmitSound()
         e.preventDefault()
         try {
             const postData = {

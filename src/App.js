@@ -1,9 +1,10 @@
 //Commons imports
-import { useState,useEffect} from 'react';
+import { useState,useEffect,useRef} from 'react';
 import axios from 'axios';
 import { Route, Routes, useLocation,useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { removeFav } from './components/redux/actions/actions'; 
+
 
 //Styles
 import './App.css';
@@ -24,7 +25,14 @@ function App(props) {
 
    const navigate = useNavigate()
    const[access,setAccess] =useState(false)
-   const audio1 = document.getElementById("audio");
+   // Utiliza useRef para obtener una referencia al elemento de audio
+  const audioRef = useRef(null);
+  // Función para reproducir el sonido
+  const playAudio = () => {
+   if (audioRef.current) {
+     audioRef.current.play();
+   }
+ };
    const dispatch=useDispatch()
    //const URLSERVER='http://localhost:3001/'
   const URLSERVER='https://rickandmorty-backend-production.up.railway.app/'   //esta URL la uso para el deploy con Railway
@@ -67,7 +75,7 @@ useEffect(()=>{
    const[Id,setId]=useState([])
    
    const onSearch= async (id)=>{
-      audio1.play()
+      playAudio()
       let array=[]
       array=Id.filter((char)=>char===id)
       
@@ -103,7 +111,7 @@ useEffect(()=>{
    
    const onClose =(id)=>{
       
-      audio1.play();
+      playAudio();
       
       if (location.pathname==="/Favorites") dispatch(removeFav(id))
       if (location.pathname==="/home") {
@@ -121,7 +129,7 @@ useEffect(()=>{
    const location=useLocation()
    const nav=()=>{
       
-   if(location.pathname!=="/" && location.pathname!=="/Register") {return <NavBar SubmitSound={audio1} onSearch={onSearch}/>}
+   if(location.pathname!=="/" && location.pathname!=="/Register") {return <NavBar SubmitSound={playAudio} onSearch={onSearch}/>}
    }
    
 
@@ -130,18 +138,18 @@ useEffect(()=>{
           
 
         <div className="App">
-           <audio id="audio" controls>
+           <audio ref={audioRef} >
            <source type="audio/wav" src={audio}/>
            </audio>
            {nav()}
            
            <Routes>
-            <Route path='/' element={<Form closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} login={login} SubmitSound={audio1} access={access} navigate={navigate}/>}/>
+            <Route path='/' element={<Form closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} login={login} SubmitSound={playAudio} access={access} navigate={navigate}/>}/>
             <Route path="/home" element={<Cards closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} characters={characters} onClose={onClose}/>} />
             <Route path="/About" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail URLSERVER={URLSERVER}/>}/>
             <Route path="/favorites" element={<Favorites URLSERVER={URLSERVER} onClose={onClose} />}></Route>
-            <Route path="/Register" element={<Registro URLSERVER={URLSERVER} SubmitSound={audio1} navigate={navigate}/>}/>
+            <Route path="/Register" element={<Registro URLSERVER={URLSERVER} SubmitSound={playAudio} navigate={navigate}/>}/>
            </Routes>
 
         </div>

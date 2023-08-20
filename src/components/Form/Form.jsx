@@ -20,7 +20,7 @@ export default function Form(props) {
 
   function handleSubmit(e) {
     
-    SubmitSound.play()
+    SubmitSound()
     e.preventDefault()
     login(user)
     console.log(access)

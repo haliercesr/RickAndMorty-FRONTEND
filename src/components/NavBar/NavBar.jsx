@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { addFav } from '../redux/actions/actions';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 //import audio1 from '../../MP3SONGS/audio1.mp3'
 import '@fortawesome/fontawesome-free/css/all.css'
 
@@ -17,7 +18,8 @@ const NavBar = (props) => {
     const dispatch = useDispatch()
     const location = useLocation()
     const { onSearch, SubmitSound } = props;
-    const allCharacters = useSelector(state => state.allCharacters)
+    const allCharacters = useSelector(state => state.allCharacters);
+    const navigate=useNavigate();
    // const songs = [audio1];
    // const [cancionIndex, setCancionIndex] = useState(0);
    
@@ -30,6 +32,7 @@ const NavBar = (props) => {
 
     useEffect(() => {
         dispatch(addFav({ id: 0 }))
+        
     }, [dispatch])
 
 
@@ -39,21 +42,21 @@ const NavBar = (props) => {
 
             <SearchBar SubmitSound={SubmitSound} onSearch={onSearch} />
             <Link to='/about'>
-                < button id="bt1Home" onClick={() => { SubmitSound.play() }}>
+                < button id="bt1Home" onClick={() => { SubmitSound() }}>
                     <span > About
                     </span></button>
             </Link>
 
             < button id="salirHome" onClick={() => {
-                SubmitSound.play()
-                window.location.reload()
+                 SubmitSound()
+                 navigate("/")
             }
             }>
                 <span > Salir
                 </span></button>
 
             <Link to='/Favorites'>
-                <button id="bt3Home" onClick={() => { SubmitSound.play() }}>
+                <button id="bt3Home" onClick={() => { SubmitSound() }}>
                     {
                         allCharacters.length > 0 ? (
                             <span>❤️</span>
@@ -70,12 +73,12 @@ const NavBar = (props) => {
     const Favorites = () => {
         return <>
             <Link to='/about'>
-                < button id="bt1Favorite" onClick={() => { SubmitSound.play() }}>
+                < button id="bt1Favorite" onClick={() => { SubmitSound() }}>
                     <span > About
                     </span></button>
             </Link>
             <Link to='/home'>
-                <button id="bt2Favorite" onClick={() => { SubmitSound.play() }}>
+                <button id="bt2Favorite" onClick={() => { SubmitSound() }}>
                     <span > Home
                     </span></button>
             </Link>
@@ -86,12 +89,12 @@ const NavBar = (props) => {
     const Detail = () => {
         return <>
             <Link to='/about'>
-                < button id="bt1Detail" onClick={() => { SubmitSound.play() }}>
+                < button id="bt1Detail" onClick={() => { SubmitSound() }}>
                     <span > About
                     </span></button>
             </Link>
             <Link to='/Favorites'>
-                <button id="bt3Detail" onClick={() => { SubmitSound.play() }}>
+                <button id="bt3Detail" onClick={() => { SubmitSound() }}>
                     {
                         allCharacters.length > 0 ? (
                             <span>❤️</span>
@@ -103,7 +106,7 @@ const NavBar = (props) => {
                 </button>
             </Link>
             <Link to='/home'>
-                <button id="bt2Detail" onClick={() => { SubmitSound.play() }}>
+                <button id="bt2Detail" onClick={() => { SubmitSound() }}>
                     <span > Home
                     </span></button>
             </Link>
@@ -114,12 +117,12 @@ const NavBar = (props) => {
     const About = () => {
         return <>
             <Link to='/home'>
-                <button id="bt2About" onClick={() => { SubmitSound.play() }}>
+                <button id="bt2About" onClick={() => { SubmitSound() }}>
                     <span > Home
                     </span></button>
             </Link>
             <Link to='/Favorites'>
-                <button id="bt3About" onClick={() => { SubmitSound.play() }}>
+                <button id="bt3About" onClick={() => { SubmitSound() }}>
                     {
                         allCharacters.length > 0 ? (
                             <span>❤️</span>
