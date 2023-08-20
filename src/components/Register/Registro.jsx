@@ -59,7 +59,8 @@ export default function Registro(props) {
         try {
             const postData = {
                 email: user.email,
-                password: user.password
+                password: user.password,
+                name:user.name
 
             }
             const { data } = await axios.post(`${URLSERVER}Register/`, postData)
