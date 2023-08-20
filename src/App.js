@@ -107,7 +107,7 @@ useEffect(()=>{
       
       if (location.pathname==="/Favorites") dispatch(removeFav(id))
       if (location.pathname==="/home") {
-      dispatch(removeFav(id))
+      //dispatch(removeFav(id))  //cuando elimino de home no quiero que se elimine de mis favoritos
       const characterfiltered=characters.filter((char)=>{return char.id !== Number(id)
       })
       setCharacters(characterfiltered)
