@@ -16,7 +16,7 @@ export const addFav=(char)=>{    // es una accion asiNcrona y retornamos una fun
             })*/
         //AHORA LA CONVERTIMOS EN ASYNC Y AWAIT
         try{
-        const {data}=await axios.post(`${URL}`, char)
+        const {data}=await axios.post(`${URL}/fav`, char)
         return dispatch(
             {
                 type: ADD_FAV,
@@ -37,7 +37,7 @@ export const removeFav=(id)=>{        //con esto logramos quitarle responsabilid
             })
         })*/
     try{
-      const {data}= await axios.delete(`${URL}/${id}`)
+      const {data}= await axios.delete(`${URL}fav/${id}`)
       return dispatch(   {
         type: REMOVE_FAV,
         payload: data
