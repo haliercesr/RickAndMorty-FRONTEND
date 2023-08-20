@@ -13,9 +13,15 @@ import Alert from '../Alert/Alert';
 
 
 export default function Cards(props) {
-   const { characters, onClose,showCustomAlert,closeCustomAlert } = props
+   const { characters, onClose,showCustomAlert,closeCustomAlert,URLSERVER } = props
   const[showWelcome,setShowWelcome]=useState(false)
-
+  
+  const nombre= async()=>{
+   try{
+     const {data}=await axios(`${URLSERVER}home`)
+     return data
+   }catch(error){error:error.message}
+  }
 
    return <div className={styles.Cards}  >
        {showCustomAlert? <Alert
@@ -30,7 +36,7 @@ export default function Cards(props) {
                   } >X</button>
                </div>
                <p>
-                  ¡Bienvenido a la aplicación de Rick y Morty!
+                  {`¡Bienvenido/a ${nombre()} a la aplicación de Rick y Morty!
                   Aquí tienes acceso a varias funciones interesantes:
                   <br></br>
                   - <span class="icon">🔍</span> Haz clic en el icono de la lupa para buscar a tu personaje favorito.
@@ -41,7 +47,7 @@ export default function Cards(props) {
                   <br></br>
                   - <span class="icon">❌</span> Y si decides cerrar sesión, simplemente haz clic en el botón de salida.
                   <br></br>
-                  Esperamos que disfrutes explorando el universo de Rick y Morty con nuestra aplicación. ¡Diviértete! 🚀🌌
+                  Esperamos que disfrutes explorando el universo de Rick y Morty con nuestra aplicación. ¡Diviértete! 🚀🌌`}
                </p>
                <div className={styles.giftDance}>
                   <img src={giftWelcome} alt="welcome" />

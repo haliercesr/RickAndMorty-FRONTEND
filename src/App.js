@@ -145,7 +145,7 @@ useEffect(()=>{
            
            <Routes>
             <Route path='/' element={<Form closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} login={login} SubmitSound={playAudio} access={access} navigate={navigate}/>}/>
-            <Route path="/home" element={<Cards closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} characters={characters} onClose={onClose}/>} />
+            <Route path="/home" element={<Cards URLSERVER={URLSERVER} closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} characters={characters} onClose={onClose}/>} />
             <Route path="/About" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail URLSERVER={URLSERVER}/>}/>
             <Route path="/favorites" element={<Favorites URLSERVER={URLSERVER} onClose={onClose} />}></Route>
