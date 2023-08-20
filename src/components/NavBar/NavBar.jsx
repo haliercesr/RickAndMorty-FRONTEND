@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { addFav } from '../redux/actions/actions';
 import { useDispatch } from 'react-redux';
-import audio1 from '../../MP3SONGS/audio1.mp3'
+//import audio1 from '../../MP3SONGS/audio1.mp3'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 
@@ -18,7 +18,7 @@ const NavBar = (props) => {
     const location = useLocation()
     const { onSearch, SubmitSound } = props;
     const allCharacters = useSelector(state => state.allCharacters)
-    const songs = [audio1];
+   // const songs = [audio1];
    // const [cancionIndex, setCancionIndex] = useState(0);
    
 
