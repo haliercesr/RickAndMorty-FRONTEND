@@ -24,6 +24,9 @@ export default function Cards(props) {
    }catch(error){return "Estimado/a"}
   }
 
+  const name= nombre()
+  const nameMayus=name[0].toUpperCase()+name.slice(1,name.length-1)
+
    return <div className={styles.Cards}  >
        {showCustomAlert? <Alert
         message="ID invalido, porfavor intentalo de nuevo!"
@@ -37,7 +40,8 @@ export default function Cards(props) {
                   } >X</button>
                </div>
                <p>
-                  {`¡Bienvenido/a ${nombre()} a la aplicación de Rick y Morty!
+                  
+                  `¡Bienvenido/a ${nameMayus} a la aplicación de Rick y Morty!
                   Aquí tienes acceso a varias funciones interesantes:
                   <br></br>
                   - <span class="icon">🔍</span> Haz clic en el icono de la lupa para buscar a tu personaje favorito.
@@ -48,7 +52,7 @@ export default function Cards(props) {
                   <br></br>
                   - <span class="icon">❌</span> Y si decides cerrar sesión, simplemente haz clic en el botón de salida.
                   <br></br>
-                  Esperamos que disfrutes explorando el universo de Rick y Morty con nuestra aplicación. ¡Diviértete! 🚀🌌`}
+                  Esperamos que disfrutes explorando el universo de Rick y Morty con nuestra aplicación. ¡Diviértete! 🚀🌌`
                </p>
                <div className={styles.giftDance}>
                   <img src={giftWelcome} alt="welcome" />
