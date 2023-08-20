@@ -6,7 +6,7 @@ import axios from "axios";
 import Alert from "../Alert/Alert";
 
 export default function Registro(props) {
-    const { SubmitSound, navigate } = props
+    const { SubmitSound, navigate, URLSERVER} = props
     const [Message, setMessage] = useState({
         ShowCustomAlert1: false,
         ShowCustomAlert2: false,
@@ -60,7 +60,7 @@ export default function Registro(props) {
                 email: user.email,
                 password: user.password
             }
-            const { data } = await axios.post(`http://localhost:3001/Register/`, postData)
+            const { data } = await axios.post(`${URLSERVER}Register/`, postData)
             const { created } = data
             console.log(created)
             if (!created) {
@@ -84,7 +84,7 @@ export default function Registro(props) {
             onClose={closeCustomAlert1}
         /> : null}
         {Message.ShowCustomAlert3 ? <Alert
-            message="Porfavor ingrese un Usuario y constraseña"
+            message="Porfavor ingrese un usuario y una contraseña"
             onClose={closeCustomAlert2}
         /> : null}
         <form className={style.RegForms} onSubmit={handleSubmit}>

@@ -87,7 +87,7 @@ useEffect(()=>{
        */
       //AHORA LO HACEMOS CON ASYNC Y AWAIT
       try{
-         const {data}= await axios(`http://localhost:3001/character/${id}`)
+         const {data}= await axios(`${URLSERVER}character/${id}`)
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
             setId((Id) =>[...Id, id])
@@ -141,7 +141,7 @@ useEffect(()=>{
             <Route path="/About" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail/>}/>
             <Route path="/favorites" element={<Favorites onClose={onClose} />}></Route>
-            <Route path="/Register" element={<Registro SubmitSound={audio1} navigate={navigate}/>}/>
+            <Route path="/Register" element={<Registro URLSERVER={URLSERVER} SubmitSound={audio1} navigate={navigate}/>}/>
            </Routes>
 
         </div>
