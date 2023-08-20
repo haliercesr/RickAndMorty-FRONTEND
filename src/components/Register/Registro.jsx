@@ -41,6 +41,7 @@ export default function Registro(props) {
         {
             email: "",
             password: "",
+            name:""
         })
     const [errors, setErrors] = useState({})
 
@@ -59,6 +60,7 @@ export default function Registro(props) {
             const postData = {
                 email: user.email,
                 password: user.password
+
             }
             const { data } = await axios.post(`${URLSERVER}Register/`, postData)
             const { created } = data
@@ -93,7 +95,7 @@ export default function Registro(props) {
                 <span>REGISTRO</span>
                 <div className={style.labelform11}>
                     <div className={style.labelReg}>
-                        <input placeholder="Nombre" className={style.input1} name="Nombre" />
+                        <input placeholder="Nombre" className={style.input1} name="Nombre" onChange={handleChange}/>
                     </div>
                 </div>
                 <div className={style.labelform11}>
