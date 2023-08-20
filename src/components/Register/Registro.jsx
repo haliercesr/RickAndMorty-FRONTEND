@@ -96,7 +96,7 @@ export default function Registro(props) {
                 <span>REGISTRO</span>
                 <div className={style.labelform11}>
                     <div className={style.labelReg}>
-                        <input placeholder="Nombre" className={style.input1} name="Nombre" onChange={handleChange}/>
+                        <input placeholder="Nombre" className={style.input1} name="name" onChange={handleChange}/>
                     </div>
                 </div>
                 <div className={style.labelform11}>
