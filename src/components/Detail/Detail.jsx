@@ -19,7 +19,7 @@ function Detail(props) {
          }
       });
       return setCharacter({});
-   }, [id]);
+   }, [id,URLSERVER]);
 
 
    return (
