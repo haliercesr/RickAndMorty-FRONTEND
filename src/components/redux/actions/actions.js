@@ -16,7 +16,7 @@ export const addFav=(char)=>{    // es una accion asiNcrona y retornamos una fun
             })*/
         //AHORA LA CONVERTIMOS EN ASYNC Y AWAIT
         try{
-        const {data}=await axios.post(`${URL}/fav`, char)
+        const {data}=await axios.post(`${URL}fav`, char)
         return dispatch(
             {
                 type: ADD_FAV,
