@@ -26,7 +26,8 @@ function App(props) {
    const[access,setAccess] =useState(false)
    const audio1 = document.getElementById("audio");
    const dispatch=useDispatch()
-   const URLSERVER='http://localhost:3001/'
+   //const URLSERVER='http://localhost:3001/'
+   const URLSERVER='https://rickandmorty-backend-production.up.railway.app/'   //esta URL la uso para el deploy con Railway
    const [showCustomAlert, setShowCustomAlert] = useState(false);
 
    const openCustomAlert = () => {
