@@ -130,7 +130,7 @@ useEffect(()=>{
    const location=useLocation()
    const nav=()=>{
       
-   if(location.pathname!=="/" && location.pathname!=="/Register") {return <NavBar SubmitSound={playAudio} onSearch={onSearch}/>}
+   if(location.pathname!=="/" && location.pathname!=="/Register") {return <NavBar setAccess={setAccess} SubmitSound={playAudio} onSearch={onSearch}/>}
    }
 
    

@@ -17,7 +17,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 const NavBar = (props) => {
     const dispatch = useDispatch()
     const location = useLocation()
-    const { onSearch, SubmitSound } = props;
+    const { onSearch, SubmitSound,setAccess } = props;
     const allCharacters = useSelector(state => state.allCharacters);
     const navigate=useNavigate();
    // const songs = [audio1];
@@ -32,6 +32,7 @@ const NavBar = (props) => {
 
     useEffect(() => {
         dispatch(addFav({ id: 0 }))
+        
         
     }, [dispatch])
 
@@ -48,8 +49,11 @@ const NavBar = (props) => {
             </Link>
 
             < button id="salirHome" onClick={() => {
+                
                  SubmitSound()
+                 setAccess(false) //tengo que cambiar el estado de access en app porque cuando me dirijo a el inicio, access sigue en true entonces el video quiere reproducirse.
                  navigate("/")
+                
             }
             }>
                 <span > Salir

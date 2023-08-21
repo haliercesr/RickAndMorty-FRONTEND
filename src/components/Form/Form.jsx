@@ -36,7 +36,7 @@ export default function Form(props) {
 
   }
 
-  const videoRef = useRef(null);
+  const videoRef =useRef(null);
 
   const playVideo = () => {
     videoRef.current.play();

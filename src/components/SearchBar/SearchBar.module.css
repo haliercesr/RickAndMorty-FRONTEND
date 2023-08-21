@@ -78,6 +78,16 @@
   left: 80%;
   cursor: pointer
 }
+.lupa:hover{
+  position: absolute;
+  background-color: rgb(185, 182, 182);
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+  border: 0px;
+  top: 7%;
+  left: 80%;
+  cursor: pointer
+}
 
 /*Extra small devices(phones, 600px and down)*/
 @media only screen and (max-width: 600px) {}
