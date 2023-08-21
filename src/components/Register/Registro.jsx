@@ -6,7 +6,7 @@ import axios from "axios";
 import Alert from "../Alert/Alert";
 
 export default function Registro(props) {
-    const { SubmitSound, navigate, URLSERVER} = props
+    const { SubmitSound, navigate, URLSERVER,handleSubmit} = props
     const [Message, setMessage] = useState({
         ShowCustomAlert1: false,
         ShowCustomAlert2: false,
@@ -53,28 +53,7 @@ export default function Registro(props) {
 
     }
 
-    const handleSubmit = async (e) => {
-        SubmitSound()
-        e.preventDefault()
-        try {
-            const postData = {
-                email: user.email,
-                password: user.password,
-                name:user.name
-
-            }
-            const { data } = await axios.post(`${URLSERVER}Register/`, postData)
-            const { created } = data
-            console.log(created)
-            if (!created) {
-                openCustomAlert(2)
-            } else {
-                openCustomAlert(1)
-            }
-
-
-        } catch (error) { openCustomAlert(3) }
-    }
+  
 
 
     return <div className={style.RegContenedor}>
