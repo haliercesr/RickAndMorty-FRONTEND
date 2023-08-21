@@ -37,10 +37,12 @@ export default function Cards(props) {
                </div>
                <p>
                   
-                  `¡Bienvenido/a {savedCreatedUser.toLocaleUpperCase()} a la aplicación de Rick y Morty!
+                  ¡Bienvenido/a {savedCreatedUser.toLocaleUpperCase()} a la aplicación de Rick y Morty!
                   Aquí tienes acceso a varias funciones interesantes:
                   <br></br>
                   - <span class="icon">🔍</span> Haz clic en el icono de la lupa para buscar a tu personaje favorito.
+                  <br></br>
+                  - <span class="icon">🂡</span> Haz clic sobre un personajepara obtener mas detalles.
                   <br></br>
                   - <span class="icon">🎲</span> Prueba la búsqueda aleatoria con el botón de dados para descubrir personajes sorprendentes.
                   <br></br>
@@ -48,7 +50,7 @@ export default function Cards(props) {
                   <br></br>
                   - <span class="icon">❌</span> Y si decides cerrar sesión, simplemente haz clic en el botón de salida.
                   <br></br>
-                  Esperamos que disfrutes explorando el universo de Rick y Morty con nuestra aplicación. ¡Diviértete! 🚀🌌`
+                  Esperamos que disfrutes explorando el universo de Rick y Morty con nuestra aplicación. ¡Diviértete! 🚀🌌
                </p>
                <div className={styles.giftDance}>
                   <img src={giftWelcome} alt="welcome" />
