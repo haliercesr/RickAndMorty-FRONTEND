@@ -46,29 +46,43 @@ const NavBar = (props) => {
     const HomeNav = () => {
 
         return <>
-           
-                <div className="pos-f-t">
-                    <nav className="navbar navbar-dark bg-dark">
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            onClick={toggleCollapse}
-                            aria-expanded={!isCollapsed}
-                            aria-label="Toggle navigation"
-                        >
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                    </nav>
-                    <div className={`collapse ${isCollapsed ? '' : 'show'}`} id="navbarToggleExternalContent">
-                        <div className="bg-dark p-4">
-                            <h4 className="text-white">Collapsed content</h4>
-                            <span className="text-muted">Toggleable via the navbar brand.</span>
-                        </div>
+
+            <div className="pos-f-t">
+
+                <nav className="navbar navbar-dark bg-dark">
+                    <SearchBar SubmitSound={SubmitSound} onSearch={onSearch} />
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        onClick={toggleCollapse}
+                        aria-expanded={!isCollapsed}
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+                <div className={`collapse ${isCollapsed ? '' : 'show'}`} id="navbarToggleExternalContent">
+                    <div className="bg-dark p-4">
+                        <Link to='/about'>
+                            <h4 className="text-white">About</h4>
+                        </Link>
+                        < button  onClick={() => {
+
+                            SubmitSound()
+                            setAccess(false) //tengo que cambiar el estado de access en app porque cuando me dirijo a el inicio, access sigue en true entonces el video quiere reproducirse.
+                            navigate("/")
+
+                        }
+                        }>
+                            Salir
+                            </button>
+                        <span className="text-mute">Favoritos</span>
                     </div>
                 </div>
-           
+            </div>
 
-            <SearchBar SubmitSound={SubmitSound} onSearch={onSearch} />
+
+
             <Link to='/about'>
                 < button id="bt1Home" onClick={() => { SubmitSound() }}>
                     <span > About

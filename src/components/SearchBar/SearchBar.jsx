@@ -14,16 +14,23 @@ export default function SearchBar(props) {
    return (
       <div className={styles.Divbarra}>
          <label>ID de personaje</label>
-         <div className={styles.InputLupa} >
-            <input type="text" id="bt" onChange={handleChange} placeholder="1,2,3,4,..." />
-            <button className={styles.lupa} onClick={() => {
-               document.querySelector("#bt").value = ''
-               onSearch(id)
-            }}>{<i class="fa-sharp fa-solid fa-magnifying-glass"></i>}</button>
-         </div>
+         <div class={styles.inputcontainer}>
+  <input type="text" class={styles.inputfield} placeholder="Buscar"/>
+  <span class={styles.searchicon}>&#128269;</span>
+</div>
+        
          <button className={styles.random} onClick={() => { onSearch(Math.floor(Math.random() * (826 + 1) + 1)) }} >Random</button>
       </div>
    );
 }
+
+
+//<div className={styles.InputLupa} >
+//<input type="text" id="bt" onChange={handleChange} placeholder="1,2,3,4,..." />
+//<button className={styles.lupa} onClick={() => {
+//   document.querySelector("#bt").value = ''
+//   onSearch(id)
+//}}>{<i class="fa-sharp fa-solid fa-magnifying-glass"></i>}</button>
+//</div>
 
 
