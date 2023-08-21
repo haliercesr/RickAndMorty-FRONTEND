@@ -1,4 +1,4 @@
-import  {useEffect } from "react";
+import { useEffect } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 import './NavBar.css';
@@ -17,23 +17,23 @@ import '@fortawesome/fontawesome-free/css/all.css'
 const NavBar = (props) => {
     const dispatch = useDispatch()
     const location = useLocation()
-    const { onSearch, SubmitSound,setAccess } = props;
+    const { onSearch, SubmitSound, setAccess } = props;
     const allCharacters = useSelector(state => state.allCharacters);
-    const navigate=useNavigate();
-   // const songs = [audio1];
-   // const [cancionIndex, setCancionIndex] = useState(0);
-   
+    const navigate = useNavigate();
+    // const songs = [audio1];
+    // const [cancionIndex, setCancionIndex] = useState(0);
 
- //   const handleNextSong = () => {
-   //     setCancionIndex((cancionIndex + 1) % songs.length);
+
+    //   const handleNextSong = () => {
+    //     setCancionIndex((cancionIndex + 1) % songs.length);
     //  };
 
-   
+
 
     useEffect(() => {
         dispatch(addFav({ id: 0 }))
-        
-        
+
+
     }, [dispatch])
 
 
@@ -49,11 +49,11 @@ const NavBar = (props) => {
             </Link>
 
             < button id="salirHome" onClick={() => {
-                
-                 SubmitSound()
-                 setAccess(false) //tengo que cambiar el estado de access en app porque cuando me dirijo a el inicio, access sigue en true entonces el video quiere reproducirse.
-                 navigate("/")
-                
+
+                SubmitSound()
+                setAccess(false) //tengo que cambiar el estado de access en app porque cuando me dirijo a el inicio, access sigue en true entonces el video quiere reproducirse.
+                navigate("/")
+
             }
             }>
                 <span > Salir
@@ -141,10 +141,11 @@ const NavBar = (props) => {
         </>
     }
 
-    
+
 
     return <div className="nav">
        
+
         {location.pathname === "/home" ? (HomeNav()) : null}
         {location.pathname === "/Favorites" ? (Favorites()) : null}
         {location.pathname === "/about" ? (About()) : null}

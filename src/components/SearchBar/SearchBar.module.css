@@ -90,76 +90,11 @@
 }
 
 /*Extra small devices(phones, 600px and down)*/
-@media only screen and (max-width: 600px) {}
-
-
-/*Medium devices(landscape tablets and large phones, 768px and up)*/
-@media only screen and (max-width: 768px) {
-
-  /*HOME*/
-  .Divbarra {
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(15, 66, 15, 0.09);
-    border-radius: 5px;
-
-  }
-
-  .InputLupa {
-    height: 80%;
-    width: 60%;
-    position: relative;
-    top: 5%;
-    left: -6%;
-    margin: 0%;
-    padding: 0%;
-  }
-
-
-
-  .Divbarra input {
-    height: 70%;
-    width: 100%;
-    border-radius: 5px;
-  }
-
-  .lupa {
-    position: absolute;
-    background-color: transparent;
-    border: 0px;
-    top: 11%;
-    left: 80%;
-    cursor: pointer
-  }
-
-  .Divbarra .random {
-
-    height: 65%;
-    margin-left: 0%;
-    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-    color: rgb(255, 255, 255);
-    border-radius: 10em;
-    font-size: 90%;
-    font-weight: 580;
-    padding: 0.05% 4%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid black;
-    box-shadow: 0 0 0 0 black;
-  }
+@media only screen and (min-width: 200px) {
 
 }
 
-
-/*Large devices(large laptops and desktops, 992px and up)*/
-@media only screen and (max-width: 992px) {
-
-  /*HOME*/
+@media only screen and (min-width: 600px) {
   .Divbarra {
 
     display: flex;
@@ -167,70 +102,28 @@
     align-items: center;
     justify-content: left;
     width: 40%;
-    height: 100%;
+    height: 80%;
     background-color: rgba(15, 66, 15, 0.09);
     border-radius: 5px;
-
+  
   }
+ 
 
-  .InputLupa {
-    height: 80%;
-    width: 60%;
-    position: relative;
-    top: 5%;
-    left: -6%;
-    margin: 0%;
-    padding: 0%;
-  }
-
-
-
-  .Divbarra input {
-    height: 70%;
-    width: 100%;
-    border-radius: 5px;
-  }
-
-  .lupa {
-    position: absolute;
-    background-color: transparent;
-    border: 0px;
-    top: 11%;
-    left: 80%;
-    cursor: pointer
-  }
-
-  .Divbarra .random {
-
-    height: 65%;
-    margin-left: 0%;
-    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-    color: rgb(255, 255, 255);
-    border-radius: 10em;
-    font-size: 90%;
-    font-weight: 580;
-    padding: 0.05% 4%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid black;
-    box-shadow: 0 0 0 0 black;
-  }
 }
 
 /*Extra large devices(large laptops and desktops, 1200px and up)*/
-@media only screen and (max-width: 1200px) {
-
-  /*HOME*/
+@media only screen and (min-width: 1200px) {
+ 
   .Divbarra {
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    width: 28%;
-    height: 100%;
+    width: 23%;
+    height: 80%;
     background-color: rgba(15, 66, 15, 0.09);
     border-radius: 5px;
-
+  
   }
 }

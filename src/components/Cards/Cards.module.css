@@ -88,19 +88,84 @@
     color:white
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 200px) {
+
+    .Welcome{  
+        display: flex; 
+        height: 80%;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
     .Cards {
     
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: top;
-        width: 100%;
-        height: 100%;
+        max-width: 100vw;
+        min-height: 100vh;
         background-image: url('../../../img/images.jpeg');
-        background-size: 100% 100%;
+        background-size: 100% 100%; /*esto hace que la imagen se adapte al tamaño de cualquier dispositivo deformandose si tiene que hacerlo*/
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         
     }
+
+}
+
+@media only screen and (min-width: 600px) {
+    .Welcome{  
+        display: flex; 
+        height: 80%;
+    }
+
+    .Cards {
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: top;
+        max-width: 100vw;
+        min-height: 100vh;
+        background-image: url('../../../img/t4XrVGqJ-wallha.com.jpg');
+        background-size: 100% 100%; /*esto hace que la imagen se adapte al tamaño de cualquier dispositivo deformandose si tiene que hacerlo*/
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+    }
+
  
+
+
+}
+
+/*Extra large devices(large laptops and desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px) {
+   
+    .Welcome{  
+        display: flex; 
+        height: 80%;
+    }
+
+    .Cards {
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: top;
+        max-width: 100vw;
+        min-height: 100vh;
+        background-image: url('../../../img/t4XrVGqJ-wallha.com.jpg');
+        background-size: 100% 100%; /*esto hace que la imagen se adapte al tamaño de cualquier dispositivo deformandose si tiene que hacerlo*/
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+    }
+
+
+
 }
 

@@ -11,38 +11,38 @@
     color: red;
 }
 
-.ConteinerNav{
+.ConteinerNav {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-.contenedorReproductor{
- position:absolute;
- top: 50%;
+.contenedorReproductor {
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.4;
-    padding:0px;
+    padding: 0px;
     border-color: #129007;
     transition: all 0.5s ease-in-out;
-    
+
 }
 
-.contenedorReproductor:hover{
-    position:absolute;
- top: 50%;
+.contenedorReproductor:hover {
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 1;
-    padding:0px;
-    border-color: #129007; 
+    padding: 0px;
+    border-color: #129007;
 }
 
-.Reproductor{
- width: 250px;
- height: 30px;
+.Reproductor {
+    width: 250px;
+    height: 30px;
 
 
 }
@@ -50,12 +50,12 @@
 /* Cambia el color del fondo de los controles */
 audio::-webkit-media-controls-panel {
     background-color: #197914
-  }
+}
 
 
 /*HOME*/
 
-#salirHome{
+#salirHome {
     position: absolute;
     top: 23%;
     right: 1.5%;
@@ -73,7 +73,7 @@ audio::-webkit-media-controls-panel {
 }
 
 #salirHome:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 #salirHome:active {
@@ -100,7 +100,7 @@ audio::-webkit-media-controls-panel {
 
 
 #bt1Home:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 ;
@@ -131,7 +131,7 @@ audio::-webkit-media-controls-panel {
 
 
 #bt3Home:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 ;
@@ -162,7 +162,7 @@ audio::-webkit-media-controls-panel {
 
 
 #bt1Favorite:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 ;
@@ -192,7 +192,7 @@ audio::-webkit-media-controls-panel {
 
 
 #bt2Favorite:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 ;
@@ -224,7 +224,7 @@ audio::-webkit-media-controls-panel {
 
 
 #bt2About:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 ;
@@ -254,7 +254,7 @@ audio::-webkit-media-controls-panel {
 
 
 #bt3About:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 ;
@@ -285,7 +285,7 @@ audio::-webkit-media-controls-panel {
 
 
 #bt1Detail:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 ;
@@ -315,7 +315,7 @@ audio::-webkit-media-controls-panel {
 
 
 #bt2Detail:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 ;
@@ -345,7 +345,7 @@ audio::-webkit-media-controls-panel {
 
 
 #bt3Detail:hover {
-    color:rgb(185, 182, 182)
+    color: rgb(185, 182, 182)
 }
 
 ;
@@ -356,87 +356,149 @@ audio::-webkit-media-controls-panel {
 }
 
 /*Extra small devices(phones, 600px and down)*/
-
-@media only screen and (max-width: 600px) {}
-
-
-/*Medium devices(landscape tablets and large phones, 768px and up)*/
-@media only screen and (max-width: 768px) {
-    /*HOME*/
-
-    #bt1Home {
-        position: absolute;
-        top: 17%;
-        right: 1.5%;
-        /* Variables */
-        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-        color: rgb(255, 255, 255);
-        border-radius: 10em;
-        font-size: 90%;
-        font-weight: 580;
-        padding: 0.05% 2%;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        border: 1px solid black;
-        box-shadow: 0 0 0 0 black;
-    }
-
-    #bt3Home {
-        position: absolute;
-        top: 17%;
-        left: 51%;
-
-        /* Variables */
-        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-        color: rgb(255, 255, 255);
-        border-radius: 10em;
-        font-size: 90%;
-        font-weight: 580;
-        padding: 0.05% 1.5%;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        border: 1px solid black;
-        box-shadow: 0 0 0 0 black;
-    }
+@media only screen and (min-width: 200px) {
 
 }
 
-
-
-
-/*Large devices(large laptops and desktops, 992px and up)*/
-@media only screen and (max-width: 992px) {
-
-
-}
-
-/*Extra large devices(large laptops and desktops, 1200px and up)*/
-@media only screen and (max-width: 1200px) {
-    /*HOME*/
+@media only screen and (min-width: 600px) {
 
     .nav {
         position: absolute;
         width: 100%;
-        height: 5%;
+        height: 6%;
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
         border-radius: 5px;
     }
 
-    #bt3Home {
-        position: absolute;
-        top: 24%;
-        left: 28.5%;
+    /*HOME*/
 
+    #bt1Home {
+        position: absolute;
+        top: 23%;
+        right: 8.3%;
         /* Variables */
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
         color: rgb(255, 255, 255);
         border-radius: 10em;
         font-size: 90%;
         font-weight: 580;
-        padding: 0.05% 1.5%;
+        padding: 0.3% 1%;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        border: 1px solid black;
+        border: 0px solid black;
         box-shadow: 0 0 0 0 black;
     }
+    
+    
+    #bt1Home:hover {
+        color: rgb(185, 182, 182)
+    }
+    
+    ;
+    
+    #bt1Home:active {
+        transform: translateY(2px) translateX(1px);
+        box-shadow: 0 0 0 0 black;
+    }
+    #bt3Home {
+        position: absolute;
+        top: 23%;
+        left: 40.5%;
+    
+        /* Variables */
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+        font-size: 90%;
+        font-weight: 580;
+        padding: 0.3% 1%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 0px solid black;
+        box-shadow: 0 0 0 0 black;
+    }
+    
+    
+    #bt3Home:hover {
+        color: rgb(185, 182, 182)
+    }
+    
+    ;
+    
+    #bt3Home:active {
+        transform: translateY(2px) translateX(1px);
+        box-shadow: 0 0 0 0 black;
+    }
+
+}
+
+/*Extra large devices(large laptops and desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px) {
+    .nav {
+        position: absolute;
+        width: 100%;
+        height: 8%;
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        border-radius: 5px;
+    }
+
+    #bt1Home {
+        position: absolute;
+        top: 23%;
+        right: 6.8%;
+        /* Variables */
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+        font-size: 90%;
+        font-weight: 580;
+        padding: 0.3% 1%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 0px solid black;
+        box-shadow: 0 0 0 0 black;
+    }
+    
+    
+    #bt1Home:hover {
+        color: rgb(185, 182, 182)
+    }
+    
+    ;
+    
+    #bt1Home:active {
+        transform: translateY(2px) translateX(1px);
+        box-shadow: 0 0 0 0 black;
+    }
+
+    #bt3Home {
+        position: absolute;
+        top: 23%;
+        left: 23.5%;
+    
+        /* Variables */
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+        font-size: 90%;
+        font-weight: 580;
+        padding: 0.3% 1%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 0px solid black;
+        box-shadow: 0 0 0 0 black;
+    }
+    
+    
+    #bt3Home:hover {
+        color: rgb(185, 182, 182)
+    }
+    
+    ;
+    
+    #bt3Home:active {
+        transform: translateY(2px) translateX(1px);
+        box-shadow: 0 0 0 0 black;
+    }
+
 }

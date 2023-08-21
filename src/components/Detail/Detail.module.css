@@ -61,19 +61,149 @@
     height: 300
 }
 
-@media only screen and (max-width: 500px) {
+/*Extra small devices(phones, 600px and down)*/
+@media only screen and (min-width: 200px) {
     .DetailContainerCard{
     
         display: flex;
         justify-content: center;
         align-items: top;
         width: 100%;
-        min-height: 100%;
+        min-height: 85%;
         background-image: url('../../../img/images.jpeg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         padding-top: 90px;
      }
- 
+
+     .container{
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 350px;
+        height: 640px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(49, 48, 48, 0.5);
+        border-radius: 30px;
+        
+    }
+
+    .Detail{
+        width: 300px;
+        height: 300px;
+        flex-direction: column;
+        color:aliceblue;
+        background-color: rgba(10, 10, 10, 0.687);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 0px;
+       
+    }
+
+    .img img{
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 0px ;
+        height: 300
+    }
+
+
+}
+
+@media only screen and (min-width: 600px) {
+    .DetailContainerCard{
+        
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        width: 100%;
+        min-height: 85%;
+        background-image: url('../../../img/t4XrVGqJ-wallha.com.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-top: 90px;
+     }
+
+     .container{
+        margin-top: 30%;
+        display: flex;
+        flex-direction: row;
+        width: 700px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(49, 48, 48, 0.5);
+        border-radius: 30px;
+        
+    }
+
+    .Detail{
+        width: 300px;
+        height: 300px;
+        flex-direction: column;
+        color:aliceblue;
+        background-color: rgba(10, 10, 10, 0.687);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    .img img{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        height: 300
+    }
+
+
+
+
+}
+
+/*Extra large devices(large laptops and desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px) {
+    .DetailContainerCard{
+    
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        width: 100%;
+        min-height: 85%;
+        background-image: url('../../../img/t4XrVGqJ-wallha.com.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-top: 90px;
+     }
+
+     .container{
+        margin-top: 10%;
+        display: flex;
+        flex-direction: row;
+        width: 700px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(49, 48, 48, 0.5);
+        border-radius: 30px;
+        
+    }
+
+    .Detail{
+        width: 300px;
+        height: 300px;
+        flex-direction: column;
+        color:aliceblue;
+        background-color: rgba(10, 10, 10, 0.687);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    .img img{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        height: 300
+    }
+
 }

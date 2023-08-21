@@ -9,14 +9,7 @@
 
 
 
-.videoform {
-    width: 100%;
-    height: 99.5%;
-    object-fit: cover;
-    z-index: 1;
-    position:relative
 
-}
 
 .ConteinerSkiButton {
     position: absolute;
@@ -176,10 +169,129 @@
 
 
 /*Extra small devices(phones, 600px and down)*/
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 200px) {
+
+
+    .contenedor {
+
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+       
+
+    }
+
+
+.videoform {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    z-index: 1;
+
+}
+
+.ConteinerSkiButton {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 10%;
+    bottom: 20%;
+}
+
+#SkipButton {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 580;
+    border: 0px;
+    padding: 0px;
+}
+
+.forms {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 210px;
+    background-color: rgba(24, 24, 24, 0.5);
+    border-radius: 20px;
+    color: aliceblue;
+    z-index: 2;
+}
+}
+
+@media only screen and (min-width: 600px) {
+
+
+    .contenedor {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
     .videoform {
         width: 100%;
-        height: 40%;
+        height: 70%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    
+    
+    .ConteinerSkiButton {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 10%;
+        bottom: 10%;
+    }
+
+    #SkipButton {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        font-weight: 580;
+        border: 0px;
+        padding: 0px;
+    }
+
+    .forms {
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        width: 350px;
+        height: 210px;
+        background-color: rgba(24, 24, 24, 0.5);
+        border-radius: 20px;
+        color: aliceblue;
+        z-index: 2;
+    }
+    }
+
+/*Extra large devices(large laptops and desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px) {
+    .videoform {
+        width: 100%;
+        height: 99.5%;
         object-fit: cover;
         z-index: 1;
     
@@ -187,37 +299,36 @@
 
     .forms {
         position: absolute;
-        top: 35%;
-        width: 300px;
-        height: 200px;
+        left:50%;
+        transform: translateX(-50%);
+        width: 400px;
+        height: 210px;
         background-color: rgba(24, 24, 24, 0.5);
         border-radius: 20px;
         color: aliceblue;
         z-index: 2;
     }
+
+    .ConteinerSkiButton {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 10%;
+        bottom: 5%;
+    }
+
+    #SkipButton {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+        font-weight: 580;
+        border: 0px;
+        padding: 0px;
+    }
 }
-
-
-@media only screen and (min-width: 500px) {}
-
-.ConteinerSkiButton {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 10%;
-    bottom: 3%;
-}
-
-
-
-/*Medium devices(landscape tablets and large phones, 768px and up)*/
-@media only screen and (min-width: 768px) {
-
-}
-
-
-/*Large devices(large laptops and desktops, 992px and up)*/
-@media only screen and (min-width: 992px) {}
-
-/*Extra large devices(large laptops and desktops, 1200px and up)*/
-@media only screen and (min-width: 1200px) {}
