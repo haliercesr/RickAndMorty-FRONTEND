@@ -2,7 +2,6 @@ import Card from '../../components/Card/Card'
 import styles from '../Cards/Cards.module.css'
 import React from 'react';
 import giftWelcome from '../../gifts/rick-and-morty-dance.gif'
-import axios from 'axios';
 
 import { useState } from 'react';
 import Alert from '../Alert/Alert';
@@ -14,18 +13,15 @@ import Alert from '../Alert/Alert';
 
 
 export default function Cards(props) {
-   const { characters, onClose,showCustomAlert,closeCustomAlert,URLSERVER } = props
+   const { characters, onClose,showCustomAlert,closeCustomAlert } = props
   const[showWelcome,setShowWelcome]=useState(false)
+  const savedCreatedUser = localStorage.getItem('createdUser')
+ 
   
-  const nombre= async()=>{
-   try{
-     const {data}=await axios(`${URLSERVER}home`)
-     return data
-   }catch(error){return "Estimado/a"}
-  }
 
-  const name= nombre()
-  const nameMayus=name[0].toUpperCase()+name.slice(1,name.length-1)
+
+  //const name= nombre()
+  //const nameMayus=name[0].toUpperCase()+name.slice(1,name.length-1)
 
    return <div className={styles.Cards}  >
        {showCustomAlert? <Alert
@@ -41,7 +37,7 @@ export default function Cards(props) {
                </div>
                <p>
                   
-                  `¡Bienvenido/a ${nameMayus} a la aplicación de Rick y Morty!
+                  `¡Bienvenido/a {savedCreatedUser.toLocaleUpperCase()} a la aplicación de Rick y Morty!
                   Aquí tienes acceso a varias funciones interesantes:
                   <br></br>
                   - <span class="icon">🔍</span> Haz clic en el icono de la lupa para buscar a tu personaje favorito.

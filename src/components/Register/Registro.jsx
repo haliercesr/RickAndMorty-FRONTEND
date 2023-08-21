@@ -5,8 +5,10 @@ import { Link } from "react-router-dom"
 import axios from "axios";
 import Alert from "../Alert/Alert";
 
+
+
 export default function Registro(props) {
-    const { SubmitSound, navigate, URLSERVER,handleSubmit} = props
+    const { SubmitSound, navigate, URLSERVER} = props
     const [Message, setMessage] = useState({
         ShowCustomAlert1: false,
         ShowCustomAlert2: false,
@@ -16,6 +18,7 @@ export default function Registro(props) {
         message3: "Porfavor ingrese un Usuario y constraseña",
 
     });
+   
 
     const openCustomAlert = (numMessage) => {
         if(numMessage === 1)setMessage({ ...Message, ShowCustomAlert1: true })
@@ -53,7 +56,32 @@ export default function Registro(props) {
 
     }
 
-  
+    const handleSubmit = async (e) => {
+        SubmitSound()
+        e.preventDefault()
+        try {
+            const postData = {
+                email: user.email,
+                password: user.password,
+                name:user.name
+
+            }
+            const { data } = await axios.post(`${URLSERVER}Register/`, postData)
+            const { created,createdUser } = data
+            
+            localStorage.setItem('createdUser', createdUser.name) //solo acepta valores de string, verificar
+            
+            if (!created) {
+                openCustomAlert(2)
+                
+            } else {
+                openCustomAlert(1)
+                
+            }
+
+
+        } catch (error) { openCustomAlert(3) }
+    }
 
 
     return <div className={style.RegContenedor}>
@@ -107,4 +135,6 @@ export default function Registro(props) {
     </div >;
 
 }
+
+
 

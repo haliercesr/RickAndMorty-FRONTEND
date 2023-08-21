@@ -25,7 +25,7 @@ function App(props) {
 
    const navigate = useNavigate()
    const[access,setAccess] =useState(false)
-   const[nombre,Setnombre]=useState("Estimado/a")
+  
    // Utiliza useRef para obtener una referencia al elemento de audio
   const audioRef = useRef(null);
   // Función para reproducir el sonido
@@ -133,28 +133,7 @@ useEffect(()=>{
    if(location.pathname!=="/" && location.pathname!=="/Register") {return <NavBar SubmitSound={playAudio} onSearch={onSearch}/>}
    }
 
-   const handleSubmit = async (e) => {
-      SubmitSound()
-      e.preventDefault()
-      try {
-          const postData = {
-              email: user.email,
-              password: user.password,
-              name:user.name
-
-          }
-          const { data } = await axios.post(`${URLSERVER}Register/`, postData)
-          const { created } = data
-          console.log(created)
-          if (!created) {
-              openCustomAlert(2)
-          } else {
-              openCustomAlert(1)
-          }
-
-
-      } catch (error) { openCustomAlert(3) }
-  }
+   
    
 
 
@@ -169,11 +148,11 @@ useEffect(()=>{
            
            <Routes>
             <Route path='/' element={<Form closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} login={login} SubmitSound={playAudio} access={access} navigate={navigate}/>}/>
-            <Route path="/home" element={<Cards URLSERVER={URLSERVER} closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} characters={characters} onClose={onClose} />} />
+            <Route path="/home" element={<Cards URLSERVER={URLSERVER} closeCustomAlert={closeCustomAlert} showCustomAlert={showCustomAlert} characters={characters} onClose={onClose}/>} />
             <Route path="/About" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail URLSERVER={URLSERVER}/>}/>
             <Route path="/favorites" element={<Favorites URLSERVER={URLSERVER} onClose={onClose} />}></Route>
-            <Route path="/Register" element={<Registro URLSERVER={URLSERVER} SubmitSound={playAudio} navigate={navigate} handleSubmit={handleSubmit}/>}/>
+            <Route path="/Register" element={<Registro URLSERVER={URLSERVER} SubmitSound={playAudio} navigate={navigate}/>}/>
            </Routes>
 
         </div>
