@@ -15,11 +15,13 @@ export default function SearchBar(props) {
       <div className={styles.Divbarra}>
          <label>ID de personaje</label>
          <div class={styles.inputcontainer}>
-  <input type="text" class={styles.inputfield} placeholder="Buscar"/>
-  <span class={styles.searchicon}>&#128269;</span>
+  <input type="text" id="bt" onChange={handleChange} class={styles.inputfield} placeholder="1,2,3..."/>
+  <button className={styles.searchicon} onClick={() => {
+  document.querySelector("#bt").value = ''
+  onSearch(id)}}>&#128269;</button>
 </div>
         
-         <button className={styles.random} onClick={() => { onSearch(Math.floor(Math.random() * (826 + 1) + 1)) }} >Random</button>
+         <button className={styles.random} onClick={() => { onSearch(Math.floor(Math.random() * (826 + 1) + 1)) }} >🎲</button>
       </div>
    );
 }

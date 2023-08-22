@@ -49,8 +49,20 @@ const NavBar = (props) => {
 
             <div className="pos-f-t">
 
-                <nav className="navbar navbar-dark bg-dark">
+                <nav className="navbar navbar-dark ">
                     <SearchBar SubmitSound={SubmitSound} onSearch={onSearch} />
+                    <Link to='/Favorites'>
+                        <button id="bt3Home" onClick={() => { SubmitSound() }}>
+                            {
+                                allCharacters.length > 0 ? (
+                                    <span>❤️</span>
+                                ) : (
+                                    <span >🤍</span>
+                                )
+                            }
+                            <span >{allCharacters.length}</span>
+                        </button>
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -62,26 +74,48 @@ const NavBar = (props) => {
                     </button>
                 </nav>
                 <div className={`collapse ${isCollapsed ? '' : 'show'}`} id="navbarToggleExternalContent">
-                    <div className="bg-dark p-4">
-                        <Link to='/about'>
-                            <h4 className="text-white">About</h4>
-                        </Link>
-                        < button  onClick={() => {
+                    <div className="bg-dark p-4 custom-background">
+                        <h5 className="left-align">
+                            <Link to='/about'>
+                                <button id="bottonCollapse1">
+                                    About
+                                </button>
+                            </Link>
+                        </h5>
+                        <h5 className="left-align">
+                            < button id="bottonCollapse2" onClick={() => {
 
-                            SubmitSound()
-                            setAccess(false) //tengo que cambiar el estado de access en app porque cuando me dirijo a el inicio, access sigue en true entonces el video quiere reproducirse.
-                            navigate("/")
+                                SubmitSound()
+                                setAccess(false) //tengo que cambiar el estado de access en app porque cuando me dirijo a el inicio, access sigue en true entonces el video quiere reproducirse.
+                                navigate("/")
 
-                        }
-                        }>
-                            Salir
+                            }
+                            }>
+                                Salir
                             </button>
-                        <span className="text-mute">Favoritos</span>
+                        </h5>
+
                     </div>
                 </div>
             </div>
 
 
+            <div className="SearchBar2">
+                <SearchBar SubmitSound={SubmitSound} onSearch={onSearch} />
+            </div>
+
+            <Link to='/Favorites'>
+                <button id="bt3Home1" onClick={() => { SubmitSound() }}>
+                    {
+                        allCharacters.length > 0 ? (
+                            <span>❤️</span>
+                        ) : (
+                            <span >🤍</span>
+                        )
+                    }
+                    <span >{allCharacters.length}</span>
+                </button>
+            </Link>
 
             <Link to='/about'>
                 < button id="bt1Home" onClick={() => { SubmitSound() }}>
@@ -100,18 +134,6 @@ const NavBar = (props) => {
                 <span > Salir
                 </span></button>
 
-            <Link to='/Favorites'>
-                <button id="bt3Home" onClick={() => { SubmitSound() }}>
-                    {
-                        allCharacters.length > 0 ? (
-                            <span>❤️</span>
-                        ) : (
-                            <span >🤍</span>
-                        )
-                    }
-                    <span >{allCharacters.length}</span>
-                </button>
-            </Link>
         </>
     }
 

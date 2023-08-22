@@ -16,7 +16,8 @@ function About() {
                <div className="textDetailAbout">
                   <h2>Contacto: </h2>
                   <h3 ><Link className='LinkLinkedin' to='https://www.linkedin.com/in/cesar-halier-440ba1110/'>www.linkedin.com/in/cesar-halier-440ba1110</Link></h3>
-                  <h3>email: cesarhalier@gmail.com</h3>
+                  <h2>Email: </h2>
+                  <h3>cesarhalier@gmail.com</h3>
                </div>
             </div>
             <div className="imgAbout">

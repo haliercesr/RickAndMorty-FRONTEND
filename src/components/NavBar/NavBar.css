@@ -55,91 +55,10 @@ audio::-webkit-media-controls-panel {
 
 /*HOME*/
 
-#salirHome {
-    position: absolute;
-    top: 23%;
-    right: 1.5%;
-    /* Variables */
-    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-    color: rgb(255, 255, 255);
-    border-radius: 10em;
-    font-size: 90%;
-    font-weight: 580;
-    padding: 0.3% 1%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 0px solid black;
-    box-shadow: 0 0 0 0 black;
-}
-
-#salirHome:hover {
-    color: rgb(185, 182, 182)
-}
-
-#salirHome:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
-}
-
-#bt1Home {
-    position: absolute;
-    top: 23%;
-    right: 6.9%;
-    /* Variables */
-    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-    color: rgb(255, 255, 255);
-    border-radius: 10em;
-    font-size: 90%;
-    font-weight: 580;
-    padding: 0.3% 1%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 0px solid black;
-    box-shadow: 0 0 0 0 black;
-}
 
 
-#bt1Home:hover {
-    color: rgb(185, 182, 182)
-}
-
-;
-
-#bt1Home:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
-}
 
 
-#bt3Home {
-    position: absolute;
-    top: 23%;
-    left: 23.5%;
-
-    /* Variables */
-    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-    color: rgb(255, 255, 255);
-    border-radius: 10em;
-    font-size: 90%;
-    font-weight: 580;
-    padding: 0.3% 1%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 0px solid black;
-    box-shadow: 0 0 0 0 black;
-}
-
-
-#bt3Home:hover {
-    color: rgb(185, 182, 182)
-}
-
-;
-
-#bt3Home:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
-}
 
 /*FAVORITE*/
 
@@ -357,95 +276,117 @@ audio::-webkit-media-controls-panel {
 
 /*Extra small devices(phones, 600px and down)*/
 @media only screen and (min-width: 200px) {
+
+    .pos-f-t {
+        width: 100%;
+    }
+
+    .navbar-dark {
+        display: flex;
+        align-items: center;
+    }
+
+    .custom-background {
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    }
+
+    #bottonCollapse1 {
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+        font-weight: 580;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 0px solid black;
+        box-shadow: 0 0 0 0 black;
+        margin-bottom: 10px;
+        /* Agrega espaciado entre los botones */
+        width: 67px;
+        height: 26px;
+    }
+
+    #bottonCollapse2 {
+
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+        font-weight: 580;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 0px solid black;
+        box-shadow: 0 0 0 0 black;
+        margin-bottom: 10px;
+        /* Agrega espaciado entre los botones */
+        width: 54px;
+        height: 26px;
+
+    }
+
+    .left-align {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+        margin-left: 0;
+        /* Puedes ajustar este valor para más espaciado */
+        margin-right: auto;
+        /* Esto asegura que los elementos se alineen a la izquierda */
+    }
+
+
+    .SearchBar2 {
+        display: none;
+    }
+
     /*HOME*/
 
-#salirHome {
-    display: none;
-    position: absolute;
-    top: 23%;
-    right: 1.5%;
-    /* Variables */
-    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-    color: rgb(255, 255, 255);
-    border-radius: 10em;
-    font-size: 90%;
-    font-weight: 580;
-    padding: 0.3% 1%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 0px solid black;
-    box-shadow: 0 0 0 0 black;
-}
+    #salirHome {
+        display: none;
 
-#salirHome:hover {
-    color: rgb(185, 182, 182)
-}
-
-#salirHome:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
-}
-
-#bt1Home {
-    display: none;
-    position: absolute;
-    top: 23%;
-    right: 6.9%;
-    /* Variables */
-    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-    color: rgb(255, 255, 255);
-    border-radius: 10em;
-    font-size: 90%;
-    font-weight: 580;
-    padding: 0.3% 1%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 0px solid black;
-    box-shadow: 0 0 0 0 black;
-}
+    }
 
 
-#bt1Home:hover {
-    color: rgb(185, 182, 182)
-}
 
-;
+    #bt1Home {
+        display: none;
 
-#bt1Home:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
-}
+    }
 
 
-#bt3Home {
-    position: absolute;
-    top: 23%;
-    left: 70.5%;
+    #bt3Home {
 
-    /* Variables */
-    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-    color: rgb(255, 255, 255);
-    border-radius: 10em;
-    font-size: 90%;
-    font-weight: 580;
-    padding: 0.3% 1%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 0px solid black;
-    box-shadow: 0 0 0 0 black;
-}
+        display: flex;
+        flex-direction: row;
+        /* Variables */
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+
+        font-weight: 580;
+
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 0px solid black;
+        box-shadow: 0 0 0 0 black;
+
+    }
 
 
-#bt3Home:hover {
-    color: rgb(185, 182, 182)
-}
+    #bt3Home:hover {
+        color: rgb(185, 182, 182)
+    }
 
-;
+    ;
 
-#bt3Home:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
-}
+    #bt3Home:active {
+        transform: translateY(2px) translateX(1px);
+        box-shadow: 0 0 0 0 black;
+    }
+
+    #bt3Home1 {
+        display: none
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -454,27 +395,35 @@ audio::-webkit-media-controls-panel {
     }
 
     .nav {
-        position: absolute;
+        display: flex;
+        align-items: center;
         width: 100%;
-        height: 6%;
+        height: 40px;
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
         border-radius: 5px;
+    }
+
+    .SearchBar2 {
+        display: flex;
+        align-items: center;
+
     }
 
     /*HOME*/
 
     #bt1Home {
+
         display: block;
-        position: absolute;
-        top: 23%;
-        right: 8.3%;
         /* Variables */
+        width: 65px;
+        height: 26px;
+        margin-left: 190px;
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
         color: rgb(255, 255, 255);
         border-radius: 10em;
         font-size: 90%;
         font-weight: 580;
-        padding: 0.3% 1%;
+        padding: 0.8% 3%;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         border: 0px solid black;
@@ -493,10 +442,13 @@ audio::-webkit-media-controls-panel {
         box-shadow: 0 0 0 0 black;
     }
 
-    #bt3Home {
-        position: absolute;
-        top: 23%;
-        left: 40.5%;
+    #bt3Home1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 50px;
+        height: 26px;
 
         /* Variables */
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
@@ -523,6 +475,31 @@ audio::-webkit-media-controls-panel {
         box-shadow: 0 0 0 0 black;
     }
 
+    #salirHome {
+        display: block;
+        margin-left: 5px;
+        /* Variables */
+        background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+        color: rgb(255, 255, 255);
+        border-radius: 10em;
+        font-size: 90%;
+        font-weight: 580;
+        padding: 0.3% 1%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 0px solid black;
+        box-shadow: 0 0 0 0 black;
+    }
+
+    #salirHome:hover {
+        color: rgb(185, 182, 182)
+    }
+
+    #salirHome:active {
+        transform: translateY(2px) translateX(1px);
+        box-shadow: 0 0 0 0 black;
+    }
+
 }
 
 /*Extra large devices(large laptops and desktops, 1200px and up)*/
@@ -534,7 +511,7 @@ audio::-webkit-media-controls-panel {
     .nav {
         position: absolute;
         width: 100%;
-        height: 8%;
+        height: 40px;
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
         border-radius: 5px;
     }

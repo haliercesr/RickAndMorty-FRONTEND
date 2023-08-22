@@ -21,22 +21,7 @@
 
 
 
-.Divbarra .random {
-  margin: 1.5%;
-  margin-top: 0.9%;
-  height: 51%;
-  margin-left: 0%;
-  background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
-  color: rgb(255, 255, 255);
-  border-radius: 10em;
-  font-size: 90%;
-  font-weight: 580;
-  padding: 0.8% 4%;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  border: 0px solid black;
-  box-shadow: 0 0 0 0 black;
-}
+
 
 .Divbarra .random:hover {
   color:rgb(90, 90, 90)
@@ -77,11 +62,18 @@
   transform: translateY(-50%);
   font-size: 20px;
   cursor: pointer;
+  border: 0px;
+  padding: 0px;
+  background-color: transparent;
 }
 
 
 /*Extra small devices(phones, 600px and down)*/
 @media only screen and (min-width: 200px) {
+  .navbar{
+    display: flex;
+    align-items: center;
+  }
   .inputcontainer {
     position: relative;
     display: inline-block;
@@ -92,14 +84,14 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 95px;
-    height: 25px;
+    width: 87px;
+    height: 20px;
   }
   
   .searchicon {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 2px;
     transform: translateY(-50%);
     font-size: 20px;
     cursor: pointer;
@@ -108,11 +100,12 @@
 
   .Divbarra {
     
-    display: inline-block;
+    display: flex;
+    align-items: center;
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    width: 100%;
+    width: 250px;
     height: 80%;
     background-color: rgba(15, 66, 15, 0.09);
     border-radius: 5px;
@@ -142,6 +135,7 @@
   transition: all 0.3s ease-in-out;
   border: 0px solid black;
   box-shadow: 0 0 0 0 black;
+  margin-left:10px
 }
 
 .Divbarra .random:hover {
@@ -174,7 +168,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    width: 40%;
+    width: 300px;
     height: 80%;
     background-color: rgba(15, 66, 15, 0.09);
     border-radius: 5px;
@@ -183,10 +177,9 @@
 
 
 .Divbarra .random {
-  margin: 1.5%;
-  margin-top: 0.9%;
-  height: 51%;
-  margin-left: 0%;
+  
+  
+  margin-left: 5px;
   background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
   color: rgb(255, 255, 255);
   border-radius: 10em;
@@ -270,7 +263,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    width: 23%;
+    width: 100%;
     height: 80%;
     background-color: rgba(15, 66, 15, 0.09);
     border-radius: 5px;
