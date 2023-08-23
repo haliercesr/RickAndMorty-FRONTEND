@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 import './NavBar.css';
@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 //import audio1 from '../../MP3SONGS/audio1.mp3'
 import '@fortawesome/fontawesome-free/css/all.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -20,6 +21,11 @@ const NavBar = (props) => {
     const { onSearch, SubmitSound, setAccess } = props;
     const allCharacters = useSelector(state => state.allCharacters);
     const navigate = useNavigate();
+    const [isCollapsed, setIsCollapsed] = useState(true);
+
+    const toggleCollapse = () => {
+        setIsCollapsed(!isCollapsed);
+    };
     // const songs = [audio1];
     // const [cancionIndex, setCancionIndex] = useState(0);
 
@@ -40,6 +46,27 @@ const NavBar = (props) => {
     const HomeNav = () => {
 
         return <>
+           
+                <div className="pos-f-t">
+                    <nav className="navbar navbar-dark bg-dark">
+                        <button
+                            className="navbar-toggler"
+                            type="button"
+                            onClick={toggleCollapse}
+                            aria-expanded={!isCollapsed}
+                            aria-label="Toggle navigation"
+                        >
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                    </nav>
+                    <div className={`collapse ${isCollapsed ? '' : 'show'}`} id="navbarToggleExternalContent">
+                        <div className="bg-dark p-4">
+                            <h4 className="text-white">Collapsed content</h4>
+                            <span className="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                </div>
+           
 
             <SearchBar SubmitSound={SubmitSound} onSearch={onSearch} />
             <Link to='/about'>
@@ -144,7 +171,7 @@ const NavBar = (props) => {
 
 
     return <div className="nav">
-       
+
 
         {location.pathname === "/home" ? (HomeNav()) : null}
         {location.pathname === "/Favorites" ? (Favorites()) : null}

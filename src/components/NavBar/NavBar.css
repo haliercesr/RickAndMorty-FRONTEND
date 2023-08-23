@@ -356,11 +356,12 @@ audio::-webkit-media-controls-panel {
 }
 
 /*Extra small devices(phones, 600px and down)*/
-@media only screen and (min-width: 200px) {
-
-}
+@media only screen and (min-width: 200px) {}
 
 @media only screen and (min-width: 600px) {
+    .pos-f-t {
+        display: none;
+    }
 
     .nav {
         position: absolute;
@@ -388,23 +389,24 @@ audio::-webkit-media-controls-panel {
         border: 0px solid black;
         box-shadow: 0 0 0 0 black;
     }
-    
-    
+
+
     #bt1Home:hover {
         color: rgb(185, 182, 182)
     }
-    
+
     ;
-    
+
     #bt1Home:active {
         transform: translateY(2px) translateX(1px);
         box-shadow: 0 0 0 0 black;
     }
+
     #bt3Home {
         position: absolute;
         top: 23%;
         left: 40.5%;
-    
+
         /* Variables */
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
         color: rgb(255, 255, 255);
@@ -417,14 +419,14 @@ audio::-webkit-media-controls-panel {
         border: 0px solid black;
         box-shadow: 0 0 0 0 black;
     }
-    
-    
+
+
     #bt3Home:hover {
         color: rgb(185, 182, 182)
     }
-    
+
     ;
-    
+
     #bt3Home:active {
         transform: translateY(2px) translateX(1px);
         box-shadow: 0 0 0 0 black;
@@ -434,6 +436,10 @@ audio::-webkit-media-controls-panel {
 
 /*Extra large devices(large laptops and desktops, 1200px and up)*/
 @media only screen and (min-width: 1200px) {
+    .pos-f-t {
+        display: none;
+    }
+
     .nav {
         position: absolute;
         width: 100%;
@@ -458,14 +464,14 @@ audio::-webkit-media-controls-panel {
         border: 0px solid black;
         box-shadow: 0 0 0 0 black;
     }
-    
-    
+
+
     #bt1Home:hover {
         color: rgb(185, 182, 182)
     }
-    
+
     ;
-    
+
     #bt1Home:active {
         transform: translateY(2px) translateX(1px);
         box-shadow: 0 0 0 0 black;
@@ -475,7 +481,7 @@ audio::-webkit-media-controls-panel {
         position: absolute;
         top: 23%;
         left: 23.5%;
-    
+
         /* Variables */
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
         color: rgb(255, 255, 255);
@@ -488,14 +494,14 @@ audio::-webkit-media-controls-panel {
         border: 0px solid black;
         box-shadow: 0 0 0 0 black;
     }
-    
-    
+
+
     #bt3Home:hover {
         color: rgb(185, 182, 182)
     }
-    
+
     ;
-    
+
     #bt3Home:active {
         transform: translateY(2px) translateX(1px);
         box-shadow: 0 0 0 0 black;

@@ -12,6 +12,10 @@ import Alert from '../Alert/Alert';
 
 
 
+
+
+
+
 export default function Cards(props) {
    const { characters, onClose,showCustomAlert,closeCustomAlert } = props
   const[showWelcome,setShowWelcome]=useState(false)
@@ -24,6 +28,7 @@ export default function Cards(props) {
   //const nameMayus=name[0].toUpperCase()+name.slice(1,name.length-1)
 
    return <div className={styles.Cards}  >
+
        {showCustomAlert? <Alert
         message="ID invalido, porfavor intentalo de nuevo!"
         onClose={closeCustomAlert}

@@ -4,6 +4,9 @@ import axios from 'axios';
 import { Route, Routes, useLocation,useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { removeFav } from './components/redux/actions/actions'; 
+import 'bootstrap/dist/css/bootstrap.css';
+
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 
 //Styles
