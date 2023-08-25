@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 //import audio1 from '../../MP3SONGS/audio1.mp3'
 import '@fortawesome/fontawesome-free/css/all.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
