@@ -279,8 +279,13 @@ audio::-webkit-media-controls-panel {
 /*Extra small devices(phones, 600px and down)*/
 @media only screen and (min-width: 200px) {
 
+    .nav{
+        height: 60px;
+    }
+
     .pos-f-t {
         width: 100%;
+        
     }
 
     .navbar a {
