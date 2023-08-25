@@ -274,11 +274,17 @@ audio::-webkit-media-controls-panel {
     box-shadow: 0 0 0 0 black;
 }
 
+
+
 /*Extra small devices(phones, 600px and down)*/
 @media only screen and (min-width: 200px) {
 
     .pos-f-t {
         width: 100%;
+    }
+
+    .navbar a {
+        text-decoration: none;
     }
 
     .navbar-dark {
@@ -387,6 +393,8 @@ audio::-webkit-media-controls-panel {
     #bt3Home1 {
         display: none
     }
+
+
 }
 
 @media only screen and (min-width: 600px) {
@@ -407,6 +415,10 @@ audio::-webkit-media-controls-panel {
         display: flex;
         align-items: center;
 
+    }
+
+    a {
+        text-decoration: none;
     }
 
     /*HOME*/
@@ -474,6 +486,8 @@ audio::-webkit-media-controls-panel {
         transform: translateY(2px) translateX(1px);
         box-shadow: 0 0 0 0 black;
     }
+
+
 
     #salirHome {
         display: block;

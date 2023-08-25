@@ -111,15 +111,7 @@
 
 }
 
-.input1 {
-    border-radius: 5px;
-    height: 18px;
-}
 
-.input2 {
-    border-radius: 5px;
-    height: 18px;
-}
 
 .label2 {
     margin: 3px;
@@ -226,6 +218,16 @@
     border-radius: 20px;
     color: aliceblue;
     z-index: 2;
+}
+
+.input1 {
+    border-radius: 5px;
+    height: 23px;
+}
+
+.input2 {
+    border-radius: 5px;
+    height: 23px;
 }
 }
 
