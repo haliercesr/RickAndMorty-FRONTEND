@@ -13,7 +13,7 @@ export default function SearchBar(props) {
 
    return (
       <div className={styles.Divbarra}>
-         <label>ID de personaje</label>
+         <label>ID personaje</label>
          <div class={styles.inputcontainer}>
   <input type="text" id="bt" onChange={handleChange} class={styles.inputfield} placeholder="1,2,3..."/>
   <button className={styles.searchicon} onClick={() => {
