@@ -23,7 +23,7 @@ function Detail(props) {
 
 
    return (
-      <div className={styles.DetailContainerCard}>;
+      <div className={styles.DetailContainerCard}>
          {character.name && (
             <div className={styles.container}>
                <div className={styles.Detail}>
@@ -31,10 +31,10 @@ function Detail(props) {
                      <h1 className={styles.titleDet}> {character.name}</h1>
                   </div>
                   <div className={styles.textDetail}>
-                     <h2>Status: {character.status}</h2>
-                     <h2>Specie: {character.species}</h2>
-                     <h2>Gender: {character.gender}</h2>
-                     <h2>Origin: {character.origin}</h2>
+                     <h2><span>Status:</span> {character.status}</h2>
+                     <h2><span>Specie:</span> {character.species}</h2>
+                     <h2><span>Gender:</span> {character.gender}</h2>
+                     <h2><span>Origin:</span> {character.origin}</h2>
                   </div>
                </div>
                <div className={styles.img}>

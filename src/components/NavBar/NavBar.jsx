@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 import './NavBar.css';
@@ -22,10 +22,19 @@ const NavBar = (props) => {
     const allCharacters = useSelector(state => state.allCharacters);
     const navigate = useNavigate();
     const [isCollapsed, setIsCollapsed] = useState(true);
+    const navbarRef = useRef(null);
 
     const toggleCollapse = () => {
         setIsCollapsed(!isCollapsed);
     };
+
+    const handleClickOutside = (event) => {
+        if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+          setIsCollapsed(true);
+        }
+      };
+
+
     // const songs = [audio1];
     // const [cancionIndex, setCancionIndex] = useState(0);
 
@@ -39,6 +48,10 @@ const NavBar = (props) => {
     useEffect(() => {
         dispatch(addFav({ id: 0 }))
 
+        window.addEventListener("click", handleClickOutside);
+        return () => {
+          window.removeEventListener("click", handleClickOutside);
+        };
 
     }, [dispatch])
 
@@ -207,7 +220,7 @@ const NavBar = (props) => {
 
 
 
-    return <div className="nav">
+    return <div className="nav" ref={navbarRef}>
 
 
         {location.pathname === "/home" ? (HomeNav()) : null}

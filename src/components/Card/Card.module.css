@@ -83,7 +83,7 @@
     .DivCard {
       display: block;
       flex-direction: column;
-      width: 210px;
+      width: 215px;
       height: 280px ;
       padding: 5px;
       background-color: rgba(49, 48, 48, 0.5);
@@ -96,10 +96,14 @@
   .DivCard:hover {
     background-color: #252424c4;
     color: rgb(30, 30, 30);
-    width: 210px;
+    width: 215px;
     height: 280px;
     border-color: red;
        
+  }
+
+  .Divtext h2{
+    font-size: 20px;
   }
   
     
@@ -133,6 +137,10 @@
   color: rgb(255, 255, 255);
   text-decoration: none;
   
+}
+
+.Divtext h2{
+  font-size: 20px;
 }
 
 

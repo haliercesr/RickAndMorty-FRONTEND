@@ -339,6 +339,69 @@ audio::-webkit-media-controls-panel {
         display: none
     }
 
+     /*ABOUT*/
+
+#bt2About {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt2About:hover {
+    color: rgb(185, 182, 182)
+}
+
+;
+
+#bt2About:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#bt3About {
+    position: absolute;
+    top: 13px;
+    left: 100px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt3About:hover {
+    color: rgb(185, 182, 182)
+}
+
+;
+
+#bt3About:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+
 
 }
 
