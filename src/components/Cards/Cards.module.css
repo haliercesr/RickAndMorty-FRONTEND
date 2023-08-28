@@ -100,7 +100,6 @@
     }
 
     .Cards {
-    
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -152,12 +151,12 @@
 
     .CardsConteinerH{
    
-        margin-top: 100px;
+        
         min-height: 80vh;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: top;
+        align-items: flex-start;
         max-width: 100vw;
         
         
@@ -193,7 +192,7 @@
 
     .CardsConteinerH{
    
-        margin-top: 100px;
+        margin-top: 0px;
         min-height: 80vh;
         display: flex;
         flex-wrap: wrap;

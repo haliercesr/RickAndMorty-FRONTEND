@@ -14,7 +14,13 @@
 .Divtext {
     font-size: 12px;
     color: rgb(255, 255, 255);
+    text-decoration: none;
     
+}
+
+.Divtext h2{
+  text-decoration: none;
+  
 }
 
 .Divimg{
@@ -73,25 +79,77 @@
     margin-right: 120px;
   }
 
-  /*Extra small devices(phones, 600px and down)*/
-@media only screen and (max-width: 500px) {
+  @media only screen and (min-width: 200px) {
+    .DivCard {
+      display: block;
+      flex-direction: column;
+      width: 210px;
+      height: 280px ;
+      padding: 5px;
+      background-color: rgba(49, 48, 48, 0.5);
+      margin: 10px;
+      border-radius: 15px;
+      
+      
+  }
+
+  .DivCard:hover {
+    background-color: #252424c4;
+    color: rgb(30, 30, 30);
+    width: 210px;
+    height: 280px;
+    border-color: red;
+       
+  }
+  
+    
 
 }
 
+@media only screen and (min-width: 600px) {
+  .DivCard {
+    display: block;
+    flex-direction: column;
+    width: 220px;
+    height: 280px ;
+    padding: 5px;
+    background-color: rgba(49, 48, 48, 0.5);
+    margin: 10px;
+    border-radius: 15px;  
+    
+}
 
-@media only screen and (min-width: 500px) {
+.DivCard:hover {
+  background-color: #252424c4;
+  color: rgb(30, 30, 30);
+  width: 220px;
+  height: 280px;
+  border-color: red;
+     
+}
+
+.Divtext a{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
   
 }
 
 
-/*Medium devices(landscape tablets and large phones, 768px and up)*/
-@media only screen and (min-width: 768px) {
-
 }
 
-
-/*Large devices(large laptops and desktops, 992px and up)*/
-@media only screen and (min-width: 992px) {}
-
 /*Extra large devices(large laptops and desktops, 1200px and up)*/
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  .Divtext h2{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+.DivCard h2{
+    text-decoration: none;
+}
+  
+}
+
