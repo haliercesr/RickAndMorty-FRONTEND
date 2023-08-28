@@ -127,7 +127,7 @@
     }
 
     .containerAbout {
-
+        
         display: flex;
         flex-direction: row;
         width: 530px;
@@ -188,7 +188,7 @@
     }
 
     .containerAbout {
-        margin-top: 0px;
+        margin-top: 50px;
         display: flex;
         flex-direction: row;
         width: 700px;

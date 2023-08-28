@@ -39,11 +39,26 @@ export default function Form(props) {
   const videoRef =useRef(null);
 
   const playVideo = () => {
-    videoRef.current.play();
+    
+    var playPromise = videoRef.current.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Automatic playback started!
+        // Show playing UI.
+      })
+      .catch(error => {
+        // Auto-play was prevented
+        // Show paused UI.
+      });
+    }
+    
   };
 
   const handleVideoEnd = () => {
-    navigate("/home")
+  
+  navigate("/home")
+    
   };
 
   //Primero definimos un estado igual a cero llamando currentTime, despues con el atributo onTimeUpdate que se ejecuta cada 1 segundo vamos actualizando el estado currentTime, asi podemos obtener el tiempo real de reproduccion.

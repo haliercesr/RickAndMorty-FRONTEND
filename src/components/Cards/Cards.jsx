@@ -40,22 +40,22 @@ export default function Cards(props) {
                   <button className={styles.buttonONClose} onClick={() => { setShowWelcome(true)}
                   } >X</button>
                </div>
-               <p>
+               <p >
                   
                   ¡Bienvenido/a {savedCreatedUser.toLocaleUpperCase()} a la aplicación de Rick y Morty!
                   Aquí tienes acceso a varias funciones interesantes:
                   <br></br>
-                  - <span class="icon">🔍</span> Haz clic en el icono de la lupa para buscar a tu personaje favorito.
+                  - <span class="icon">🔍</span> Haz click en el icono de la lupa para buscar a tu personaje favorito.
                   <br></br>
-                  - <span class="icon">🂡</span> Haz clic sobre un personajepara obtener mas detalles.
+                  - <span class="icon">🂡</span> Haz click sobre un personaje para obtener mas detalles.
                   <br></br>
                   - <span class="icon">🎲</span> Prueba la búsqueda aleatoria con el botón de dados para descubrir personajes sorprendentes.
                   <br></br>
-                  - <span class="icon">ℹ️</span> Si deseas saber más sobre esta aplicación, visita la sección "Acerca de mí".
+                  - <span class="icon">ℹ️</span> Si deseas contactarme, visita la sección "Acerca de mí".
                   <br></br>
                   - <span class="icon">❌</span> Y si decides cerrar sesión, simplemente haz clic en el botón de salida.
                   <br></br>
-                  Esperamos que disfrutes explorando el universo de Rick y Morty con nuestra aplicación. ¡Diviértete! 🚀🌌
+                  Espero que disfrutes explorando el universo de Rick y Morty con esta aplicación. ¡Diviértete! 🚀🌌
                </p>
                <div className={styles.giftDance}>
                   <img src={giftWelcome} alt="welcome" />

@@ -28,7 +28,7 @@ function Detail(props) {
             <div className={styles.container}>
                <div className={styles.Detail}>
                   <div className={styles.titleDetail}>
-                     <h1> {character.name}</h1>
+                     <h1 className={styles.titleDet}> {character.name}</h1>
                   </div>
                   <div className={styles.textDetail}>
                      <h2>Status: {character.status}</h2>

@@ -102,9 +102,7 @@ const NavBar = (props) => {
 
             <div className="SearchBar2">
                 <SearchBar SubmitSound={SubmitSound} onSearch={onSearch} />
-            </div>
-
-            <Link to='/Favorites'>
+                <Link to='/Favorites'>
                 <button id="bt3Home1" onClick={() => { SubmitSound() }}>
                     {
                         allCharacters.length > 0 ? (
@@ -116,6 +114,9 @@ const NavBar = (props) => {
                     <span >{allCharacters.length}</span>
                 </button>
             </Link>
+            </div>
+
+           
 
             <Link to='/about'>
                 < button id="bt1Home" onClick={() => { SubmitSound() }}>

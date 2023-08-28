@@ -49,8 +49,14 @@
     align-items: center;
 }
 
+ .titleDet{
+    color:rgb(250, 250, 6);
+    text-decoration:underline;
+}
+
 .textDetail h2{
-    margin: 5px
+    text-align: center;
+    margin: 5px;
 }
 
 
@@ -169,7 +175,7 @@
         justify-content: center;
        
         width: 100%;
-        min-height: 94.8%;
+        min-height: 100%;
         background-image: url('../../../img/t4XrVGqJ-wallha.com.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;

@@ -467,7 +467,7 @@ audio::-webkit-media-controls-panel {
     .SearchBar2 {
         display: flex;
         align-items: center;
-        width: 225px;
+        width: 290px;
 
     }
 
@@ -697,7 +697,7 @@ audio::-webkit-media-controls-panel {
     }
 
     .nav {
-        position: relative;
+        display: none;   /*ver porque funciona asi, la pantalla no se agranda mas que el vieport*/
         width: 100%;
         height: 40px;
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
@@ -744,7 +744,6 @@ audio::-webkit-media-controls-panel {
         flex-direction: row;
         width: 50px;
         height: 26px;
-        margin-right: 800px;
         background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
         color: rgb(255, 255, 255);
         border-radius: 10em;
@@ -772,7 +771,7 @@ audio::-webkit-media-controls-panel {
     .SearchBar2 {
         position: absolute;
         left:1%;
-        width: 240px;
+        width: 290px;
 
 
     }
